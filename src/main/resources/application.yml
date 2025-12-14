@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: weekly-planner-api
+
+  # Подключение к PostgreSQL
+  datasource:
+    url: jdbc:postgresql://localhost:5432/weekly_planner
+    username: planner_user
+    password: secure_password
+    driver-class-name: org.postgresql.Driver
+
+  # JPA/Hibernate
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: false
+    open-in-view: false
+
+# Сервер
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+# JWT
+app:
+  jwtSecret: super-secret-key-make-it-long-and-secure-256-chars-minimum-production
+  jwtExpirationMs: 86400000
+
+# Логирование
+logging:
+  level:
+    root: INFO
+    com.example.planner: DEBUG
