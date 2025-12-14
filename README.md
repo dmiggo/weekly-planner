@@ -1,4 +1,4 @@
-# 📅 Weekly Planner API
+# 📅 Weekly Planner API (WeePla)
 
 Spring Boot REST API для управления задачами и планированием недели.
 
